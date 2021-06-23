@@ -24,9 +24,10 @@ package main
 
 import (
 	"fmt"
-	registry "github.com/kris-nova/naml"
-	"github.com/kris-nova/naml/pkg"
 	"os"
+
+	registry "github.com/kris-nova/naml"
+	naml "github.com/kris-nova/naml/pkg"
 
 	"github.com/kris-nova/logger"
 	"github.com/urfave/cli/v2"
@@ -56,8 +57,8 @@ Is there really THAT much of a difference with defining an application in Go com
 		Version: registry.Version,
 		Authors: []*cli.Author{
 			{
-				Name:  "Kris Nóva",
-				Email: "kris@nivenly.com",
+				Name:  "Aaron Schlesinger",
+				Email: "aaron@ecomaz.net",
 			},
 		},
 		Flags: []cli.Flag{

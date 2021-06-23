@@ -24,7 +24,7 @@ version=$(shell git rev-parse HEAD)
 
 compile: ## Compile for the local architecture ⚙
 	@echo "Compiling..."
-	go build -ldflags "-X 'github.com/kris-nova/naml.Version=$(version)'" -o naml cmd/*.go
+	go build -ldflags "-X 'github.com/arschles/http-add-on-installer.Version=$(version)'" -o naml cmd/*.go
 
 install: ## Install your naml 🎉
 	@echo "Installing..."

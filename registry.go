@@ -23,8 +23,7 @@
 package naml
 
 import (
-	myapplication "github.com/kris-nova/naml/apps/_example"
-	mydeployment "github.com/kris-nova/naml/apps/sampleapp"
+	kedahttp "github.com/arschles/http-add-on-installer/apps/kedahttp"
 	naml "github.com/kris-nova/naml/pkg"
 )
 
@@ -34,14 +33,8 @@ var Version string
 // Load is where we can set up applications.
 //
 // This is called whenever the naml program starts.
-func Load() {
+func Load(namespace string) {
 
 	// We can keep them very simple, and hard code all the logic like this one.
-	naml.Register(myapplication.New())
-
-	// We can also have several instances of the same application like this.
-	naml.Register(mydeployment.New("default", "example-1", "beeps", 3))
-	naml.Register(mydeployment.New("default", "example-2", "boops", 1))
-	naml.Register(mydeployment.New("default", "example-3", "cyber boops", 7))
-
+	naml.Register(kedahttp.New("testingkeda", "http-add-on"))
 }
